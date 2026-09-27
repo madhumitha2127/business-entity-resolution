@@ -1,0 +1,17 @@
+﻿.venv/
+__pycache__/
+*.pyc
+
+dataset/
+experiments/
+models/
+output/
+
+*.tsv
+*.csv
+*.pkl
+*.joblib
+*.bin
+*.pt
+
+.vscode/
