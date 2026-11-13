@@ -1,46 +1,131 @@
-# Business Entity Resolution - Amazon ML Challenge 2026
 
-## Overview
-This project performs business entity resolution between Source 1 and Source 2/3 using normalization, blocking, feature engineering, and LightGBM.
+<div align="center">
 
-## Pipeline
-1. Dataset inspection
-2. Text normalization
-3. Blocking and candidate generation
-4. Training-pair creation
-5. Feature engineering
-6. LightGBM training
-7. Validation and threshold selection
-8. Test candidate generation
-9. Test prediction
-10. Submission formatting and validation
+# 🔍 BUSINESS ENTITY RESOLUTION
 
-## Model
-Model: LightGBM 4.7.0
-License: MIT License
-Prediction threshold: 0.81
+### Intelligent Matching · Data Processing · Machine Learning
 
-## Validation Results
-F0.5: 0.9811
-Precision: 0.9894
-Recall: 0.9491
-AUC: 0.99936
+<img src="https://img.shields.io/badge/PYTHON-0B0F14?style=for-the-badge&logo=python&logoColor=3DF2E0" />
+<img src="https://img.shields.io/badge/LIGHTGBM-0B0F14?style=for-the-badge&logo=lightgbm&logoColor=3DF2E0" />
+<img src="https://img.shields.io/badge/STATUS-COMPLETED-0B0F14?style=for-the-badge&labelColor=0B0F14&color=3DF2E0" />
 
-These are validation-set results and are not the hidden test-set score.
+</div>
 
-## Final Test Output
-matching_results.tsv and candidate_pairs.tsv contain all 1,732,544 required Source 1 entities.
+---
 
-## Validation
-The official challenge validator was run with ID checking enabled and reported: PASS - no blocking issues found. Safe to submit.
+## 🖥️ `01 / OVERVIEW`
 
-Additional checks confirmed no duplicate S1 rows, no duplicate IDs, and every predicted ID exists in the test S2/S3 data.
+Business Entity Resolution identifies records that refer to the same real-world business across multiple data sources.
 
-## Reproducibility
-Install dependencies with: pip install -r requirements.txt
-Source code is contained in the src directory.
-The solution uses the challenge-provided datasets and does not use external business-entity lookup.
+This solution uses text normalization, candidate generation, feature engineering and machine learning to identify matching business entities.
 
-## Output
-matching_results.tsv contains one row per Source 1 entity with comma-separated matched IDs.
-candidate_pairs.tsv contains one row per Source 1 entity with the final candidate IDs supplied to the matching stage.
+## ⚙️ `02 / PROCESSING_PIPELINE`
+
+```text
+DATA INPUT
+    |
+    v
+DATASET INSPECTION
+    |
+    v
+TEXT NORMALIZATION
+    |
+    v
+BLOCKING & CANDIDATE GENERATION
+    |
+    v
+TRAINING PAIR CREATION
+    |
+    v
+FEATURE ENGINEERING
+    |
+    v
+LIGHTGBM MODEL TRAINING
+    |
+    v
+VALIDATION & THRESHOLD SELECTION
+    |
+    v
+TEST PREDICTION
+    |
+    v
+OUTPUT VALIDATION
+```
+
+## 🧠 `03 / MODEL_DETAILS`
+
+| Component | Technology |
+|---|---|
+| Programming | Python |
+| ML Model | LightGBM 4.7.0 |
+| Feature processing | Feature Engineering |
+| Prediction threshold | 0.81 |
+| License | MIT |
+
+## 📊 `04 / VALIDATION_METRICS`
+
+<div align="center">
+
+| Metric | Result |
+|:---:|:---:|
+| F0.5 Score | **0.9811** |
+| Precision | **0.9894** |
+| Recall | **0.9491** |
+| AUC | **0.99936** |
+
+</div>
+
+<sub>These are validation-set results, not hidden test-set results.</sub>
+
+## 📁 `05 / OUTPUT_DETAILS`
+
+The final output includes:
+
+- `matching_results.tsv` – predicted matching IDs for each Source 1 entity.
+- `candidate_pairs.tsv` – candidate IDs supplied to the matching stage.
+
+**Dataset coverage:** 1,732,544 Source 1 entities.
+
+The official challenge validator passed with ID checking enabled. Additional checks confirmed no duplicate Source 1 rows or IDs and verified that predicted IDs existed in the test data.
+
+## 🚀 `06 / SETUP`
+
+Clone the repository:
+
+```bash
+git clone https://github.com/madhumitha2127/business-entity-resolution.git
+```
+
+Navigate into the directory:
+
+```bash
+cd business-entity-resolution
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Source code is available in the `src` directory.
+
+## 🔬 `07 / KEY_CONCEPTS`
+
+- Entity matching
+- Text normalization
+- Blocking and candidate generation
+- Feature engineering
+- Gradient boosting
+- Model validation
+- Threshold selection
+
+---
+
+<div align="center">
+
+### ⚡ MATCHING DATA. FINDING CONNECTIONS.
+
+**Built with Python and machine learning.**
+
+</div>
